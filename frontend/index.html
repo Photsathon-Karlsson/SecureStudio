@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <div class="card">
+    <h1>Secure Studio</h1>
+
+    <div class="form">
+      <label class="input-group">
+        <span class="icon">✉️</span>
+        <input id="username" type="text" placeholder="Username">
+      </label>
+
+      <label class="input-group">
+        <span class="icon">🔒</span>
+        <input id="password" type="password" placeholder="Password">
+      </label>
+
+      <button id="login-button" class="btn-primary">Login / Register</button>
+    </div>
+
+    <!-- โซนแสดงเมื่อ login แล้ว -->
+    <div class="after-login hidden">
+      <p>You are logged in as: <code id="user-info">User</code></p>
+      <button id="logout-button" class="btn-secondary">Logout</button>
+    </div>
+
+    <!-- ข้อความผลลัพธ์จาก backend -->
+    <p id="output" class="output">Welcome to Secure Studio!</p>
+  </div>
+</body>
+</html>

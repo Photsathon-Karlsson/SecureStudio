@@ -1,0 +1,170 @@
+/* ===== Background & layout ===== */
+:root{
+  --pink:#ff4da0;
+  --pink-strong:#ff2c8a;
+  --blue:#2d67ff;
+  --card-bg:#ffffff;
+  --muted:#8892a6;
+  --border:#e8e8ee;
+}
+
+*{ box-sizing:border-box; }
+
+html, body{
+  height:100%;
+  margin:0;
+  font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* พื้นหลังไล่สี + จัดกึ่งกลางทั้งหน้า */
+body{
+  background: linear-gradient(180deg, var(--pink), var(--blue));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#111;
+}
+
+/* ===== Card ===== */
+.card{
+  width: 360px;
+  max-width: 92vw;
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 28px 26px 22px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.25);
+  text-align:center;
+}
+
+.card h1{
+  margin: 0 0 18px;
+  font-size: 20px;
+  letter-spacing:.6px;
+}
+
+/* ===== Form ===== */
+.form{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.input-group{
+  position:relative;
+  display:flex;
+  align-items:center;
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding: 0 10px;
+  background:#f7f8fb;
+}
+
+.input-group .icon{
+  width:20px;
+  margin-right:8px;
+  opacity:.8;
+  font-size:14px;
+}
+
+.input-group input{
+  border:none;
+  outline:none;
+  background:transparent;
+  padding: 12px 6px;
+  width:100%;
+  font-size:14px;
+}
+
+/* remember me */
+.remember{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:var(--muted);
+  font-size:13px;
+  user-select:none;
+}
+
+/* ===== Buttons ===== */
+.btn-primary{
+  background: var(--pink);
+  border:none;
+  color:#fff;
+  padding: 12px 14px;
+  border-radius:8px;
+  font-weight:600;
+  letter-spacing:.4px;
+  cursor:pointer;
+  transition: transform .05s ease, background .2s ease;
+}
+
+.btn-primary:active{ transform: translateY(1px); }
+.btn-primary:hover{ background: var(--pink-strong); }
+
+.btn-secondary{
+  background:#f1f1f6;
+  border:1px solid var(--border);
+  color:#222;
+  padding: 10px 12px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* ===== Divider ===== */
+.divider{
+  color:var(--muted);
+  font-size:12px;
+  margin: 10px 0;
+}
+
+/* Social buttons row */
+.social-row{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-bottom: 10px;
+}
+
+.btn-social{
+  flex:1;
+  border:1px solid var(--border);
+  background:#fff;
+  color:#222;
+  padding: 10px 0;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  font-size:13px;
+}
+
+.btn-social.fb{ color:#1877f2; }
+.btn-social.gg{ color:#db4437; }
+
+/* hint text */
+.hint{
+  color:var(--muted);
+  font-size:12px;
+  margin: 8px 0 0;
+}
+.hint a{ color:#333; text-decoration:none; }
+
+/* output + after-login */
+.output{
+  background:#fafafa;
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:10px;
+  margin-top:12px;
+  font-size:13px;
+}
+
+.after-login{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-top:8px;
+}
+
+/* utility */
+.hidden{ display:none; }
