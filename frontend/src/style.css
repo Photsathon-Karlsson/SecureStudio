@@ -1,0 +1,138 @@
+:root {
+  --mint-light: #F2FEF7;   /* very light mint (background top) */
+  --aqua-soft: #9ACBD0;    /* soft aqua */
+  --teal-mid: #48A6A7;     /* medium teal */
+  --teal-strong: #006A71;  /* deep teal (button/main) */
+  --text: #113538;         /* dark teal text */
+  --muted: #557C7E;        /* soft muted text */
+  --card-bg: #ffffff;      /* white card */
+  --border: #e0f2f2;       /* light teal border */
+}
+
+/* Reset + layout */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+}
+
+/* Background gradient (soft mint to deep teal) */
+body {
+  background: linear-gradient(180deg,
+    var(--mint-light) 0%,
+    var(--aqua-soft) 40%,
+    var(--teal-mid) 70%,
+    var(--teal-strong) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card container */
+.card {
+  width: 360px;
+  max-width: 92vw;
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 30px 26px 24px;
+  box-shadow: 0 12px 30px rgba(0, 106, 113, 0.25);
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+/* Title */
+.card h1 {
+  margin: 0 0 18px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--teal-strong);
+}
+
+/* Form style */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+/* Input box */
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0 12px;
+  background: #f5fbfb;
+}
+
+.input-group .icon {
+  width: 20px;
+  margin-right: 8px;
+  opacity: 0.8;
+  font-size: 14px;
+  color: var(--teal-mid);
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px 6px;
+  width: 100%;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Button */
+.btn-primary {
+  background: var(--teal-strong);
+  border: none;
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 5px 15px rgba(0, 106, 113, 0.35);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+/* Output box */
+.output {
+  background: #f7fefe;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* After login section */
+.after-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}

@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "src",           // use source files from backend/src
+    "outDir": "dist",           // emit compiled .js into backend/dist
+
+    // Environment (ESM like teacher)
+    "module": "nodenext",       // ESM in Node
+    "target": "esnext",
+    "types": ["node"],          // Node globals/types
+
+    // Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Strictness
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Behavior
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true, // do not rewrite import/export paths
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
